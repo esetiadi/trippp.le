@@ -1,4 +1,4 @@
-/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
 
 /*
  * What follows is the result of much research on cross-browser styling.
@@ -20,9 +20,7 @@ html {
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
  *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
+ * These selection rule sets have to be separate.
  * Customize the background color to match your design.
  */
 
@@ -96,139 +94,136 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+
    html {
      box-sizing: border-box;
    }
    *, *:before, *:after {
      box-sizing: inherit;
    }
-body {
-  font-family: serif;
-  line-height: 1.4;
-}
-img {
-  max-width: 100%;
-  display: block;
-}
-/* .main-nav */
-.main-nav {
-  display: none;
-}
 
-/*.page-header*/
-.page-header {
-  background-color: red;
-  color: purple;
-  position: relative;
-  padding: 1em;
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  z-index: 100;
-}
-.page-header h1 {
-  font-size: 1.5em;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 0;
-}
-.page-header .nav-icon {
-  position: absolute;
-  left: 1em;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
+   body {
+     font-family: serif;
+     line-height: 1.4;
+   }
+   img {
+     max-width: 100%;
+     display: block;
+   }
 
-/*main-content*/
-.main-content {
-  margin: 3em auto;
-  max-width: 960px;
-  padding: 1em;
-}
-
-.main-nav {
-  background: purple;
-  font-size: 1.5em;
-  font-weight: bold;
-}
-.main-nav ul{
-  margin-top: 1.5em;
-  list-style-type: none;
-}
-.main-nav li{
-  margin: 1em 0;
-  position: relative;
-}
-.main-nav a {
-  color: red;
-  text-decoration: none;
-}
-.main-nav .close-icon {
-  font-style: normal;
-  position: absolute;
-  top: 0.95rem;
-  right: 1em;
-  line-height: 1;
-  color: red;
-  cursor:pointer;
-}
-.main-nav li {
-  position: relative;
-}
-
-.main-nav li.is-active:before {
-  content: '';
-  display: block;
-  border: 0.5rem solid transparent;
-  border-left-color: red;
-  position: absolute;
-  left: -0.75em;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-/*.nav-open when nav bar is open*/
-.nav-open {
-  overflow: hidden;
-}
-.nav-open .main-nav {
-display: block;
-position: absolute;
-top: 0;
-left: 0;
-border: 1px solid purple;
-width: 50%;
-min-height: 100%;
-}
-.nav-open .page-content {
-border: 1px solid red;
-transform: translateX(50%);
-}
-
-.nav-open .page-content:before {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: hsla(0, 100%, 50%, 0.5);
-  position: absolute;
-  top:0;
-  left:0;
-  z-index: 150;
-}
+   /* .page-header */
+   .page-header {
+     background-color: red;
+     color: purple;
+     position: relative;
+     padding: 1em;
+     position: fixed;
+     width: 100%;
+     top: 0;
+     left: 0;
+     z-index: 100;
+   }
+   .page-header h1 {
+     font-size: 1.5em;
+     line-height: 1;
+     text-transform: uppercase;
+     text-align: center;
+     margin: 0;
+   }
+   .page-header .nav-icon {
+     cursor: pointer;
+     position: absolute;
+     left: 1em;
+     top: 50%;
+     transform: translateY(-50%);
+   }
 
 
+   /* .main-content */
+   .main-content {
+     margin: 3em auto;
+     max-width: 960px;
+     padding: 1em;
+   }
 
 
+   /* .main-nav */
+   .main-nav {
+     display: none;
+     background: purple;
+     font-size: 1.5em;
+     font-weight: bold;
+     position: relative;
+   }
+   .main-nav ul {
+     margin-top: 1.5em;
+     list-style-type: none;
+   }
 
+   .main-nav li {
+     margin: 1em 0;
+   }
 
+   .main-nav a {
+     color: red;
+     text-decoration: none;
+   }
 
+   .main-nav .close-icon {
+     font-style: normal;
+     position: absolute;
+     top: 0.9rem;
+     right: 1em;
+     line-height: 1;
+     color: red;
+     cursor: pointer;
+   }
 
+   .main-nav li {
+     position: relative;
+   }
+   .main-nav li.is-active:before {
+     content: '';
+     display: block;
+     border: 0.5rem solid transparent;
+     border-left-color: red;
+     position: absolute;
+     left: -0.75em;
+     top: 50%;
+     transform: translateY(-50%);
+   }
 
-
-
+   /* .nav-open
+      When the navigation sidebar is open
+   */
+   .nav-open {
+     overflow: hidden;
+   }
+   .nav-open .main-nav {
+     display: block;
+     position: absolute;
+     top: 0;
+     left: 0;
+     border: 1px solid purple;
+     width: 50%;
+     min-height: 100%;
+   }
+   .nav-open .page-content  {
+     border: 1px solid red;
+     transform: translateX(50%);
+   }
+   .nav-open .page-content:before {
+     content: '';
+     display: block;
+     width: 100%;
+     height: 100%;
+     background: hsla(0, 100%, 50%, 0.66);
+     position: absolute;
+     top: 0;
+     left: 0;
+     z-index: 150;
+   }
 
 
 
@@ -246,11 +241,7 @@ transform: translateX(50%);
 
 /*
  * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
  */
 
 .visuallyhidden {
@@ -262,7 +253,6 @@ transform: translateX(50%);
     padding: 0;
     position: absolute;
     width: 1px;
-    white-space: nowrap; /* 1 */
 }
 
 /*
@@ -279,7 +269,6 @@ transform: translateX(50%);
     overflow: visible;
     position: static;
     width: auto;
-    white-space: inherit;
 }
 
 /*
@@ -332,16 +321,18 @@ transform: translateX(50%);
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
+   http://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
 
 @media print {
     *,
     *:before,
-    *:after {
+    *:after,
+    *:first-letter,
+    *:first-line {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster */
-        -webkit-box-shadow: none !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
         box-shadow: none !important;
         text-shadow: none !important;
     }
@@ -369,9 +360,6 @@ transform: translateX(50%);
         content: "";
     }
 
-    pre {
-        white-space: pre-wrap !important;
-    }
     pre,
     blockquote {
         border: 1px solid #999;
@@ -390,6 +378,10 @@ transform: translateX(50%);
     tr,
     img {
         page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
     }
 
     p,
